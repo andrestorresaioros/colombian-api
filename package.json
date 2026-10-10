@@ -1,0 +1,18 @@
+{
+  "name": "colombian-api",
+  "version": "1.0.0",
+  "description": "Consumo y agrupamiento de datos de la API pública api-colombia.com.",
+  "main": "prueba.js",
+  "scripts": {
+    "start": "node prueba.js",
+    "presidentes": "node prueba.js presidentes",
+    "atracciones": "node prueba.js atracciones",
+    "aeropuertos": "node prueba.js aeropuertos",
+    "regiones": "node prueba.js regiones"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "César Andrés Torres Bernal",
+  "license": "MIT"
+}

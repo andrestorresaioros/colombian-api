@@ -212,4 +212,23 @@ async function groupAirportsByRegionDepartmentCityType() {
     return groupedByRegionDeptCityType;
 }
 
-groupAirportsByRegionDepartmentCityType();
+// Ejecuta la consulta indicada por argumento: node prueba.js <presidentes|atracciones|aeropuertos|regiones>
+const consultas = {
+    presidentes: groupPresidentsByParty,
+    atracciones: groupTouristicAttractionsByDepartmentCity,
+    aeropuertos: groupAirportByDepartmentCity,
+    regiones: groupAirportsByRegionDepartmentCityType,
+};
+
+if (typeof require !== 'undefined' && require.main === module) {
+    const nombre = process.argv[2] || 'regiones';
+    const consulta = consultas[nombre];
+    if (!consulta) {
+        console.error(`Consulta desconocida: ${nombre}. Opciones: ${Object.keys(consultas).join(', ')}`);
+        process.exit(1);
+    }
+    consulta().catch((error) => {
+        console.error('Error al consultar la API:', error.message);
+        process.exit(1);
+    });
+}

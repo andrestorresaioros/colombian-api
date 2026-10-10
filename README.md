@@ -5,6 +5,8 @@
 
 Solución a una prueba técnica de procesamiento de datos: consumo de la API pública [api-colombia.com](https://api-colombia.com/) y agrupamiento de la información de presidentes, atracciones turísticas y aeropuertos de Colombia.
 
+El enunciado completo de la prueba está en [`PRUEBA_DESARROLLO_CRENAGEL.pdf`](PRUEBA_DESARROLLO_CRENAGEL.pdf).
+
 ## Consultas implementadas
 
 | Comando | Función | Resultado |
